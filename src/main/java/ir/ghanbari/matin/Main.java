@@ -1,6 +1,7 @@
 package ir.ghanbari.matin;
 
 import javafx.application.Application;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -24,5 +25,6 @@ public class Main extends Application {
         stage.setFullScreen(true);
         stage.setTitle("Quiz App");
         stage.setFullScreenExitHint("");
+        stage.getIcons().add(new Image("images/icon.png"));
     }
 }

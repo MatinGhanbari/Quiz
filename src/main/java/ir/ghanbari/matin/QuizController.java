@@ -34,6 +34,8 @@ public class QuizController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Main.quiz.setQuizController(this);
         pane.getChildren().removeAll(rect, btn_rect, label_rect);
+        label_rect.setWrapText(true);
+        label_quiz.setWrapText(true);
     }
 
     public void setQuiz(String quiz) {

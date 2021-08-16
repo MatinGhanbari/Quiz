@@ -15,8 +15,7 @@ import java.util.Scanner;
 public class Quiz {
     private final Stage stage;
     private QuizController quizController;
-    private final File file = new File("src/main/resources/quizzes.txt");
-    private final Scanner scanner = new Scanner(file);
+    private Scanner scanner;
 
     public Quiz(Stage stage) throws FileNotFoundException {
         this.stage = stage;
@@ -47,6 +46,7 @@ public class Quiz {
 
     private void setQuiz() {
         try {
+            scanner = new Scanner(new File("D:/quizzes.txt"));
             quizController.setQuiz(scanner.nextLine());
             String[] buttons = {scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()};
             quizController.setButtons(buttons);
@@ -60,7 +60,7 @@ public class Quiz {
             quizController.setQuiz(scanner.nextLine());
             String[] buttons = {scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()};
             quizController.setButtons(buttons);
-        }else {
+        } else {
             quizController.finish();
         }
     }

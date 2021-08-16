@@ -6,11 +6,11 @@
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane fx:id="pane" prefHeight="864.0" prefWidth="1536.0" styleClass="background_bg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ghanbari.matin.QuizController">
-   <Label fx:id="label_quiz" layoutX="195.0" layoutY="125.0" prefHeight="134.0" prefWidth="895.0" text="سوال" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0" />
-   <Button fx:id="btn1" layoutX="100.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#select" prefHeight="214.0" prefWidth="650.0" text="1" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="326.0" />
-   <Button fx:id="btn2" layoutX="785.6" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#select" prefHeight="214.0" prefWidth="650.0" text="2" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="326.0" />
-   <Button fx:id="btn4" layoutX="785.6" layoutY="575.6" mnemonicParsing="false" onMouseClicked="#select" prefHeight="214.0" prefWidth="650.0" text="4" AnchorPane.bottomAnchor="74.0" AnchorPane.rightAnchor="100.0" />
-   <Button fx:id="btn3" layoutX="100.0" layoutY="575.6" mnemonicParsing="false" onMouseClicked="#select" prefHeight="214.0" prefWidth="650.0" text="3" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="100.0" />
+   <Label fx:id="label_quiz" layoutX="195.0" layoutY="125.0" prefHeight="353.0" prefWidth="1336.0" text="سوال" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0" />
+   <Button fx:id="btn1" layoutX="100.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#select" prefHeight="160.0" prefWidth="650.0" text="1" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="450.0" />
+   <Button fx:id="btn2" layoutX="785.6" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#select" prefHeight="160.0" prefWidth="650.0" text="2" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="450.0" />
+   <Button fx:id="btn4" layoutX="785.6" layoutY="575.6" mnemonicParsing="false" onMouseClicked="#select" prefHeight="160.0" prefWidth="650.0" text="4" AnchorPane.bottomAnchor="74.0" AnchorPane.rightAnchor="100.0" />
+   <Button fx:id="btn3" layoutX="100.0" layoutY="575.6" mnemonicParsing="false" onMouseClicked="#select" prefHeight="160.0" prefWidth="650.0" text="3" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="100.0" />
    <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#000000c7" height="864.0" stroke="BLACK" strokeType="INSIDE" width="1536.0" />
    <Label fx:id="label_rect" alignment="CENTER" layoutX="333.0" layoutY="93.0" prefHeight="465.0" prefWidth="1336.0" style="-fx-text-fill: gold;" text="نتیجه" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0" />
    <Button fx:id="btn_rect" layoutX="603.0" layoutY="635.0" mnemonicParsing="false" onMouseClicked="#next" prefHeight="120.0" prefWidth="334.0" text="بعدی" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" />
@@ -18,5 +18,5 @@
       <Button fx:id="btn_start_test" layoutX="541.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#startTest" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: rgba(50, 100, 255,0.7);" text="شروع" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="250.0" />
       <Button fx:id="btn_exit" layoutX="550.0" layoutY="448.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="166.0" prefWidth="478.0" style="-fx-background-color: rgba(255, 100, 50,0.7);" text="خروج" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" />
    </AnchorPane>
-   <Label fx:id="label_matin_ghanbari1" text="App Designed By Matin Ghanbari" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+   <Label fx:id="label_matin_ghanbari" text="App Designed By Matin Ghanbari" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
 </AnchorPane>
