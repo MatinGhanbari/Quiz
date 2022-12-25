@@ -14,4 +14,4 @@ This is a JavaFx game.
 
 ## How to run
 <li>Move javafx libraries to "C:\Program Files\Javafx"</li>
-<li>Run <code>run.bat</code> file in out/artifacts/Quiz_jar</li># V.H.King
+<li>Run <code>run.bat</code> file in out/artifacts/Quiz_jar</li>
