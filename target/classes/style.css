@@ -70,5 +70,5 @@
 }
 
 #label_rect:hover{
-    -fx-background-color: rgba(120, 120, 120, 0.2);
+    -fx-background-color: rgba(225, 225, 225, 0.8);
 }

@@ -1,12 +1,15 @@
 package ir.ghanbari.matin;
 
+import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
+import javax.print.attribute.standard.Media;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
@@ -25,6 +28,7 @@ public class QuizController implements Initializable {
     public AnchorPane first_pane;
     public Button btn_start_test;
     public Button btn_exit;
+    public Label label_matin_ghanbari;
     private Button answer;
     private int counter = 0;
     private int correctAnswers = 0;
@@ -67,9 +71,13 @@ public class QuizController implements Initializable {
             correctAnswers++;
             pane.getChildren().addAll(rect, btn_rect, label_rect);
             label_rect.setStyle(label_rect.getStyle() + "\n-fx-text-fill: green;");
+            answer.setStyle(answer.getStyle() + "\n-fx-background-color: green;");
+            label_rect.setStyle(label_rect.getStyle() + "\n-fx-text-fill: green;");
             label_rect.setText("آفرین جوابت درست بود\nتا حالا " + correctAnswers + " سوال از " + counter + " سوال رو\nدرست جواب دادی!");
         } else {
             counter++;
+            ((Button) mouseEvent.getSource()).setStyle(((Button) mouseEvent.getSource()).getStyle() + "\n-fx-background-color: red;");
+            answer.setStyle(answer.getStyle() + "\n-fx-background-color: green;");
             pane.getChildren().addAll(rect, btn_rect, label_rect);
             label_rect.setStyle(label_rect.getStyle() + "\n-fx-text-fill: red;");
             label_rect.setText("متاسفانه جوابت غلط بود\nتا حالا " + correctAnswers + " سوال از " + counter + " سوال رو\nدرست جواب دادی!");
@@ -80,6 +88,10 @@ public class QuizController implements Initializable {
         if (btn_rect.getText().equalsIgnoreCase("خروج")) {
             System.exit(0);
         }
+        btn1.setStyle("");
+        btn2.setStyle("");
+        btn3.setStyle("");
+        btn4.setStyle("");
         pane.getChildren().removeAll(rect, btn_rect, label_rect);
         Main.quiz.next();
     }

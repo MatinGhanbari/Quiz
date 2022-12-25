@@ -6,9 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -46,10 +46,14 @@ public class Quiz {
 
     private void setQuiz() {
         try {
-            scanner = new Scanner(new File("D:/quizzes.txt"));
-            quizController.setQuiz(scanner.nextLine());
-            String[] buttons = {scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()};
-            quizController.setButtons(buttons);
+            scanner = new Scanner(Paths.get("D:/Programming/JAVA/MyProjects/Quiz/quizzes.txt"));
+            if (scanner.hasNextLine()) {
+                quizController.setQuiz(scanner.nextLine());
+                String[] buttons = {scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()};
+                quizController.setButtons(buttons);
+            } else {
+                System.exit(0);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
